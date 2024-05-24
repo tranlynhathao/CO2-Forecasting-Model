@@ -40,15 +40,15 @@ def main():
 
     reg = LinearRegression()
     reg.fit(x_train, y_train)
-    # y_predict = reg.predict(x_test)
-    # mae = mean_absolute_error(y_test, y_predict)
-    # mse = mean_squared_error(y_test, y_predict)
-    # r2 = r2_score(y_test, y_predict)
-    #
-    # print("Mean absolute error: {}".format(mae))
-    # print("Mean squared error: {}".format(mse))
-    # print("R2: {}".format(r2))
-    #
+    y_predict = reg.predict(x_test)
+    mae = mean_absolute_error(y_test, y_predict)
+    mse = mean_squared_error(y_test, y_predict)
+    r2 = r2_score(y_test, y_predict)
+
+    print("Mean absolute error: {}".format(mae))
+    print("Mean squared error: {}".format(mse))
+    print("R2: {}".format(r2))
+
     # fig, ax = plt.subplots()
     # ax.plot(data["time"][:int(num_samples*train_ratio)], y_train, label="train")
     # ax.plot(data["time"][int(num_samples*train_ratio):], y_test, label="test")
